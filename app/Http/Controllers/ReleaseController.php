@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Releases;
 use Illuminate\Http\Request;
 
 
@@ -10,19 +11,16 @@ class ReleaseController extends Controller{
 
   public function getRelease($id){
 
-    // $Book  = Book::find($id);
+    $release  = Releases::find($id);
 
-    // return response()->json($Book);
+    return response()->json($release);
   }
 
   public function createRelease(Request $request){
 
-      return $request;
+    $release = Releases::create($request->all());
 
-      // $Book = Book::create($request->all());
-
-      // return response()->json($Book);
-
+    return response()->json($release);
   }
 
   public function updateRelease(Request $request,$id){

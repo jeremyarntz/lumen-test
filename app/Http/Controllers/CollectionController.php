@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Collections;
 use Illuminate\Http\Request;
 
 
@@ -17,21 +18,21 @@ class CollectionController extends Controller{
 
   public function addToCollection(Request $request){
 
-      return $request;
+    // $Book = Book::create($request->all());
 
-      // $Book = Book::create($request->all());
+    // return response()->json($Book);
 
-      // return response()->json($Book);
-
+    return $request;
   }
 
-  public function removieFromCollection(Request $request,$id){
-      // $Book  = Book::find($id);
-      // $Book->delete();
+  public function removeFromCollection(Request $request,$id){
 
-      // return response()->json('deleted');
+    // $Book  = Book::find($id);
+    // $Book->delete();
 
-      return $request;
+    // return response()->json('deleted');
+
+    return $request;
   }
 }
 ?>

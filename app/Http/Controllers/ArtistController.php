@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Artists;
 use Illuminate\Http\Request;
 
 
@@ -17,29 +18,26 @@ class ArtistController extends Controller{
 
   public function getArtist($id){
 
-    // $Book  = Book::find($id);
+    $artist  = Artists::find($id);
 
-    // return response()->json($Book);
+    return response()->json($artist);
   }
 
   public function createArtist(Request $request){
 
-    return $request;
+    $artist  = Artists::create($request->all());
 
-    // $Book = Book::create($request->all());
-
-    // return response()->json($Book);
+    return response()->json($artist);
 
   }
 
   public function updateArtist(Request $request){
 
-    return $request;
-
     // $Book = Book::create($request->all());
 
     // return response()->json($Book);
 
+    return $request;
   }
 
   public function getArtistReleases($id){
@@ -47,6 +45,8 @@ class ArtistController extends Controller{
     // $Book  = Book::find($id);
 
     // return response()->json($Book);
+
+    return $id;
   }
 }
 ?>
