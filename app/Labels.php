@@ -3,9 +3,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Artists extends Model {
+class Labels extends Model {
   public $timestamps = false;
 
-  protected $table = 'artists';
+  protected $table = 'labels';
   protected $fillable = ['name'];
 }
