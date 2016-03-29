@@ -11,7 +11,9 @@ class LabelController extends Controller{
 
   public function getLabels(){
 
-    echo 'Hello World';
+    $Labels = Labels::all();
+
+    return response()->json($Labels);
   }
 
   public function getLabel($id){
@@ -29,12 +31,10 @@ class LabelController extends Controller{
   }
 
   public function updateLabel(Request $request,$id){
-    // $Book  = Book::find($id);
-    // $Book->delete();
+    $Label = Labels::find($id);
+    $Label->update($request->all());
 
-    // return response()->json('deleted');
-
-    return $request;
+    return response()->json($Label);
   }
 
   public function getLabelReleases($id){

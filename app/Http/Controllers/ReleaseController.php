@@ -23,13 +23,12 @@ class ReleaseController extends Controller{
     return response()->json($release);
   }
 
-  public function updateRelease(Request $request,$id){
-      // $Book  = Book::find($id);
-      // $Book->delete();
+  public function updateRelease(Request $request, $id){
 
-      // return response()->json('deleted');
+    $Release = Releases::find($id);
+    $Release->update($request->all());
 
-      return $request;
+    return response()->json($Release);
   }
 }
 ?>

@@ -11,9 +11,9 @@ class ArtistController extends Controller{
 
   public function getArtists(){
 
-    // $Book  = Book::find($id);
+    $Artists = Artists::all();
 
-    // return response()->json($Book);
+    return response()->json($Artists);
   }
 
   public function getArtist($id){
@@ -28,23 +28,21 @@ class ArtistController extends Controller{
     $artist  = Artists::create($request->all());
 
     return response()->json($artist);
-
   }
 
-  public function updateArtist(Request $request){
+  public function updateArtist(Request $request, $id){
 
-    // $Book = Book::create($request->all());
+    $Artist = Artists::find($id);
+    $Artist->update($request->all());
 
-    // return response()->json($Book);
-
-    return $request;
+    return response()->json($Artist);
   }
 
   public function getArtistReleases($id){
-
+    $Artists = Artists::all();
     // $Book  = Book::find($id);
 
-    // return response()->json($Book);
+    // return response()->json($Artists);
 
     return $id;
   }

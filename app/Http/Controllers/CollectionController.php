@@ -11,23 +11,21 @@ class CollectionController extends Controller{
 
   public function getCollection($id){
 
-    // $Book  = Book::find($id);
+    $Collection = Collections::where('user', $id)->get();
 
-    // return response()->json($Book);
+    return response()->json($Collection);
   }
 
   public function addToCollection(Request $request){
 
-    // $Book = Book::create($request->all());
+    $Collection = Collections::create($request->all());
 
-    // return response()->json($Book);
-
-    return $request;
+    return response()->json($Collection);
   }
 
-  public function removeFromCollection(Request $request,$id){
+  public function removeFromCollection(Request $request, $id){
 
-    // $Book  = Book::find($id);
+    // $Item  = Book::find($id);
     // $Book->delete();
 
     // return response()->json('deleted');
