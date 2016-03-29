@@ -7,7 +7,7 @@
 
 ## Labels:
 
-### Get:
+#### Get:
 GET /api/v1/labels/{id}
 
 #### Create:
@@ -61,7 +61,7 @@ Body:
 #### Get:
 Get /api/v1/releases/{id}
 
-### Create:
+#### Create:
 POST /api/v1/releases/
 
 Body:
