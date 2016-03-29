@@ -8,4 +8,9 @@ class Artists extends Model {
 
   protected $table = 'artists';
   protected $fillable = ['name'];
+
+  public function releases()
+  {
+      return $this->belongsToMany('App\Releases');
+  }
 }

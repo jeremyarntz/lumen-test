@@ -10,15 +10,17 @@
 ### Get:
 GET /api/v1/labels/{id}
 
-### Create:
+#### Create:
 POST /api/v1/labels/
 
 Body:
+```
 {
    "name" : "Label Name"
 }
+```
 
-### Update:
+#### Update:
 PUT /api/v1/labels/{id}
 ```
 Body:
