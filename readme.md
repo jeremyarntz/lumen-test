@@ -49,7 +49,8 @@ GET /api/v1/artists/{id}
 PUT /api/v1/artists/{id}
 
 Body:
-```{
+```
+{
     "name": "Updated Artist Name"
 }
 ```
@@ -64,7 +65,8 @@ Get /api/v1/releases/{id}
 POST /api/v1/releases/
 
 Body:
-```{
+```
+{
    "name" : "Artist Name",
    "artist" : 1,
    "label" : 1
@@ -75,7 +77,8 @@ Body:
 PUT /api/v1/releases/{id}
 
 Body:
-```{
+```
+{
     "name": "New Release Name"
 }
 ```
@@ -86,7 +89,8 @@ Body:
 POST /api/v1/user/collection
 
 Body:
-```{
+```
+{
     "user" : "1",
     "release" : "2"
 }
